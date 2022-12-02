@@ -3,10 +3,12 @@ import { IController } from "../contracts/http/i-controller";
 import { IHttpRequest } from "../contracts/http/i-http-request";
 import { IHttpResponse, ok, serverError } from "../contracts/http/i-http-response";
 
+export type ICreateBookControllerRequestGenres = 'romance' | 'adventure' | 'horror';
+
 export type ICreateBookControllerRequest = {
     title: string;
     description: string;
-    genre: 'romance' | 'adventure' | 'horror';
+    genre: ICreateBookControllerRequestGenres;
 };
 
 export type ICreateBookControllerResponse = {
@@ -21,7 +23,10 @@ export class CreateBookController implements IController {
         private readonly createBookUseCase: ICreateBookUseCase,
     ) {}
 
-    async handle(request: IHttpRequest<ICreateBookControllerRequest>): Promise<IHttpResponse<ICreateBookControllerResponse | Error>> {
+    async handle(request: IHttpRequest<ICreateBookControllerRequest>): Promise<IHttpResponse<
+        | ICreateBookControllerResponse
+        | Error
+    >> {
         try {
             const { body } = request;
 
