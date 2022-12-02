@@ -1,7 +1,8 @@
 import { IBookModel } from "@/data/repositories/models/i-book-model";
 import { Book } from "@/domain/entities/book";
+import { IMapper } from "./i-mapper";
 
-export class BookMapper {
+export class BookMapper implements IMapper {
     static toPersistency(bookEntity: Book): IBookModel {
         return {
             id: bookEntity.id,
