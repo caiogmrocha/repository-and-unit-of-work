@@ -2,7 +2,7 @@ import type { Environment } from 'vitest';
 import { PrismaTestEnviroment } from './prisma-test-environment';
 
 export default <Environment>{
-  name: 'prisma',
+  name: 'e2e',
   setup() {
     const prismaTestEnvironment = new PrismaTestEnviroment();
 
