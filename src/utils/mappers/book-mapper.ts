@@ -1,4 +1,4 @@
-import { IBookModel } from "@/data/repositories/models/i-book-model";
+import { IBookModel } from "@/data/contracts/repositories/models/i-book-model";
 import { Book } from "@/domain/entities/book";
 import { IMapper } from "./i-mapper";
 

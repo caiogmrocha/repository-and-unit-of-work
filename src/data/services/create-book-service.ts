@@ -1,6 +1,6 @@
+import { IInsertBookRepository } from "@/data/contracts/repositories/insert-book-repository/i-insert-book-repository";
 import { Book } from "@/domain/entities/book";
 import { BookMapper } from "@/utils/mappers/book-mapper";
-import { IInsertBookRepository } from "data/repositories/insert-book-repository/i-insert-book-repository";
 import { ICreateBookUseCase, ICreateBookUseCaseParams } from "domain/usecases/i-create-book-use-case";
 
 export class CreateBookService implements ICreateBookUseCase {

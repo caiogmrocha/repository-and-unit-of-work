@@ -1,5 +1,5 @@
-import { IInsertBookRepository } from "@/data/repositories/insert-book-repository/i-insert-book-repository";
-import { IBookModel, IBookModelGenres } from "@/data/repositories/models/i-book-model";
+import { IInsertBookRepository } from "@/data/contracts/repositories/insert-book-repository/i-insert-book-repository";
+import { IBookModel, IBookModelGenres } from "@/data/contracts/repositories/models/i-book-model";
 import { prismaClient } from "../client";
 
 export class PrismaBookRepository implements IInsertBookRepository {
